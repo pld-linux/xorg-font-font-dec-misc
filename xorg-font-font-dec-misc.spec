@@ -1,5 +1,5 @@
 Summary:	dec-misc font
-Summary(pl):	Font dec-misc
+Summary(pl.UTF-8):   Font dec-misc
 Name:		xorg-font-font-dec-misc
 Version:	1.0.0
 Release:	0.1
@@ -21,7 +21,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 dec-misc font.
 
-%description -l pl
+%description -l pl.UTF-8
 Font dec-misc.
 
 %prep
