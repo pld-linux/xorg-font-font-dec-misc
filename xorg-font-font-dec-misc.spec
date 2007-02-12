@@ -1,5 +1,5 @@
 Summary:	dec-misc font
-Summary(pl.UTF-8):   Font dec-misc
+Summary(pl.UTF-8):	Font dec-misc
 Name:		xorg-font-font-dec-misc
 Version:	1.0.0
 Release:	0.1
