@@ -1,11 +1,11 @@
-Summary:	dec-misc font
-Summary(pl.UTF-8):	Font dec-misc
+Summary:	DEC bitmap fonts
+Summary(pl.UTF-8):	Fonty bitmapowe DEC
 Name:		xorg-font-font-dec-misc
 Version:	1.0.0
-Release:	0.1
+Release:	1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-dec-misc-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/font/font-dec-misc-%{version}.tar.bz2
 # Source0-md5:	284e554db1c64fb7580a06df01444a2b
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
@@ -19,10 +19,10 @@ Requires:	%{_fontsdir}/misc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-dec-misc font.
+DEC cursor and session bitmap fonts.
 
 %description -l pl.UTF-8
-Font dec-misc.
+Fonty bitmapowe DEC cursor i session.
 
 %prep
 %setup -q -n font-dec-misc-%{version}
@@ -54,4 +54,4 @@ fontpostinst misc
 %files
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog
-%{_fontsdir}/misc/*.pcf.gz
+%{_fontsdir}/misc/dec*.pcf.gz
