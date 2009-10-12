@@ -1,12 +1,12 @@
 Summary:	DEC bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe DEC
 Name:		xorg-font-font-dec-misc
-Version:	1.0.0
-Release:	2
+Version:	1.0.1
+Release:	1
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-dec-misc-%{version}.tar.bz2
-# Source0-md5:	284e554db1c64fb7580a06df01444a2b
+# Source0-md5:	05714516824c680ce747c6ef9d2fbbdd
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -33,6 +33,8 @@ Fonty bitmapowe DEC cursor i session.
 %{__autoconf}
 %{__automake}
 %configure \
+	--build=%{_host_platform} \
+	--host=%{_host_platform} \
 	--with-fontdir=%{_fontsdir}/misc
 
 %{__make}
