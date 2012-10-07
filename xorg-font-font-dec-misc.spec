@@ -2,7 +2,7 @@ Summary:	DEC bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe DEC
 Name:		xorg-font-font-dec-misc
 Version:	1.0.3
-Release:	1
+Release:	2
 License:	MIT
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-dec-misc-%{version}.tar.bz2
