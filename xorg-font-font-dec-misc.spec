@@ -1,20 +1,22 @@
 Summary:	DEC bitmap fonts
 Summary(pl.UTF-8):	Fonty bitmapowe DEC
 Name:		xorg-font-font-dec-misc
-Version:	1.0.3
-Release:	2
+Version:	1.0.4
+Release:	1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/individual/font/font-dec-misc-%{version}.tar.bz2
-# Source0-md5:	6e7c5108f1b16d7a1c7b2c9760edd6e5
-URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+Source0:	https://xorg.freedesktop.org/releases/individual/font/font-dec-misc-%{version}.tar.xz
+# Source0-md5:	25c16b45005a7cc7094bc854517c0402
+URL:		https://xorg.freedesktop.org/
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util >= 1.2
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-font-font-util >= 1.4
+BuildRequires:	xorg-util-util-macros >= 1.20
+BuildRequires:	xz
 Requires(post,postun):	fontpostinst
 Requires:	%{_fontsdir}/misc
 BuildArch:	noarch
@@ -34,8 +36,10 @@ Fonty bitmapowe DEC cursor i session.
 %{__autoconf}
 %{__automake}
 %configure \
+%if "%{_gnu}" != "-gnux32"
 	--build=%{_host} \
 	--host=%{_host} \
+%endif
 	--with-fontdir=%{_fontsdir}/misc
 
 %{__make}
@@ -57,5 +61,5 @@ fontpostinst misc
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog README
+%doc COPYING ChangeLog README.md
 %{_fontsdir}/misc/dec*.pcf.gz
